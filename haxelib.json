@@ -1,0 +1,10 @@
+{
+	"name": "handshake",
+	"license": "MIT",
+	"tags": ["unity"],
+	"description": "Helpers for HUGS.",
+	"contributors": ["shinji-yoshida"],
+	"releasenote": "",
+	"version": "0.0.1",
+	"url": "https://github.com/shinji-yoshida/handshake"
+}
