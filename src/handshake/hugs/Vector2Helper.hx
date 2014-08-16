@@ -1,11 +1,11 @@
 package handshake.hugs;
+import handshake.cross.SFloat;
 import unityengine.Vector2;
 import unityengine.Vector3;
 
-@:nativeGen
 class Vector2Helper {
-  public static function vector2(v:Vector3):Vector2 {
-    return untyped v;
+  inline public static function vector2(v:Vector3):Vector2 {
+    return new Vector2(v.x, v.y);
   }
 
   public static function vector3(v:Vector2):Vector3 {
@@ -20,11 +20,11 @@ class Vector2Helper {
     return untyped __cs__("a-b");
   }
 
-  public static function mul(a:Vector2, b:Single) : Vector2 {
+  public static function mul(a:Vector2, b:SFloat) : Vector2 {
     return untyped __cs__("b*a");
   }
 
-  public static function div(a:Vector2, b:Single) : Vector2 {
+  public static function div(a:Vector2, b:SFloat) : Vector2 {
     return untyped __cs__("a/b");
   }
 
