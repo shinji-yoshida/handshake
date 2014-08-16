@@ -44,7 +44,7 @@ class GameObjectHelper
     return null;
   }
 
-  public static function Instantiate(prefab:GameObject):GameObject{
+  public static function instantiate(prefab:GameObject):GameObject{
     return cast Object.Instantiate(prefab);
   }
 }

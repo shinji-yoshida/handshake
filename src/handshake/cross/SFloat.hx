@@ -5,6 +5,11 @@ abstract SFloat(Single) from Single to Single to Float {
     this = s;
   }
 
+  @:from
+  inline public static function fromInt(i:Int):SFloat {
+    return new SFloat(i);
+  }
+
   @:op(A + B)
   inline public function plus(rhs:Single):SFloat {
     return new SFloat(this + rhs);

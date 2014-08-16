@@ -8,8 +8,8 @@ class Vector2Helper {
     return new Vector2(v.x, v.y);
   }
 
-  public static function vector3(v:Vector2):Vector3 {
-    return untyped v;
+  inline public static function vector3(v:Vector2):Vector3 {
+    return new Vector3(v.x, v.y, 0);
   }
 
   public static function add(a:Vector2, b:Vector2) : Vector2 {
