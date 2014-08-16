@@ -1,4 +1,5 @@
 package handshake.hugs;
+import unityengine.Object;
 import unityengine.Transform;
 import hugs.HUGSWrapper;
 import unityengine.Component;
@@ -43,4 +44,7 @@ class GameObjectHelper
     return null;
   }
 
+  public static function Instantiate(prefab:GameObject):GameObject{
+    return cast Object.Instantiate(prefab);
+  }
 }
