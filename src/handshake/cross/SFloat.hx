@@ -11,22 +11,26 @@ abstract SFloat(Single) from Single to Single to Float {
   }
 
   @:op(A + B)
-  inline public function plus(rhs:Single):SFloat {
-    return new SFloat(this + rhs);
+  inline public function plus(rhs:SFloat):SFloat {
+    return new SFloat(this + rhs.get());
   }
 
   @:op(A - B)
-  inline public function minus(rhs:Single):SFloat {
-    return new SFloat(this - rhs);
+  inline public function minus(rhs:SFloat):SFloat {
+    return new SFloat(this - rhs.get());
   }
 
   @:op(A * B)
-  inline public function mul(rhs:Single):SFloat {
-    return new SFloat(this * rhs);
+  inline public function mul(rhs:SFloat):SFloat {
+    return new SFloat(this * rhs.get());
   }
 
   @:op(A / B)
-  inline public function divide(rhs:Single):SFloat {
-    return new SFloat(this / rhs);
+  inline public function divide(rhs:SFloat):SFloat {
+    return new SFloat(this / rhs.get());
+  }
+
+  inline public function get():Single{
+    return this;
   }
 }
