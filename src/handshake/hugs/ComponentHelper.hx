@@ -26,4 +26,12 @@ class ComponentHelper {
   inline public static function getParentTypedComponent<T>(c:Component, type:Class<T>):T{
     return ComponentMethods.getParentTypedComponent(c, type);
   }
+
+  public static function getParentTypedComponentIncludingSelf<T>(c:Component, type:Class<T>):T{
+    var result = getTypedComponent(c, type);
+    if(result != null)
+      return result;
+    else
+      return getParentTypedComponent(c, type);
+  }
 }
